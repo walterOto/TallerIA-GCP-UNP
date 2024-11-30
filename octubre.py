@@ -1,7 +1,7 @@
+import os
 import google.generativeai as genai
 
-api = "AIzaSyB1PrF3AoScetI7hcB6C5kA9Rh3tbfkdz4"
-genai.configure(api)
+genai.configure(api_key="AIzaSyBWydmHuDJjc5K4q7TH85lmHPtrrqfmzlY")
 
 # Create the model
 generation_config = {
@@ -18,19 +18,13 @@ model = genai.GenerativeModel(
 )
 
 response = model.generate_content([
-  "input: ¿Existe 26 Octubre?",
-  "input 2: 26 Octubre pertenece a Piura",
-  "input 3: 26 de Octubre es una fecha o distrito en Piura",
-  "output: El distrito de Veintiséis de Octubre es uno de los diez distritos que conforman la provincia de Piura, ubicada en el departamento homónimo al norte del Perú. Desde el punto de vista de la jerarquía de la iglesia católica, forma parte de la Arquidiócesis de Piura.​",
-  "output 2: Si, es nuevo",
-  "input: ¿26 Octubre es de Piura o Lima?",
-  "input 2: ",
-  "input 3: ",
-  "output: Pertenece a Piura pe",
-  "output 2: ",
-  "input: ",
-  "input 2: ",
-  "input 3: ",
+  "input: ¿existe 26 de octubre?",
+  "input 2: 26 de octubre pertenece a Piura",
+  "input 3: ¿26 de octubre es una fecha o un distrito de Piura?",
+  "output: El distrito de Veintiséis de Octubre es uno de los diez distritos que conforman la provincia de Piura, ubicada en el departamento homónimo al norte del Perú. Desde el punto de vista de la jerarquía de la iglesia católica, forma parte de la Arquidiócesis de Piura.1​",
+  "input: 26 de octubre es de piura o lima?",
+  "input 2: 26 de octubre es de piura o lima?",
+  "input 3: 26 de octubre es de piura o lima?",
   "output: ",
 ])
 
